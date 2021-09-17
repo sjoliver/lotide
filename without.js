@@ -20,15 +20,7 @@ const assertArraysEqual = function(arr1, arr2) {
   }
 };
 
-// c style loop
-  /* for (let i = 0; i < source.length; i++) {
-      if (source[i] !== itemsToRemove[i]) {
-        newArray.push(source[i]);
-    }
-  }
-  */
-
-// function that itemsToRemoves unwanted words from the source array & returns an updated array
+// function that removes unwanted words from the source array & returns an updated array
 const without = function(source, itemsToRemove) {
   let newArray = [];
   for (let word of source) {
@@ -44,7 +36,9 @@ console.log(without([1, 2, 3], [2]))
 // test cases (1)
 const words = ["hello", "world", "lighthouse"];
 console.log(without(words, ["lighthouse"]))
+
 without(words, ["lighthouse"]); // no need to capture return value for this test case
+
 // Make sure the original array was not altered by the without function
 assertArraysEqual(words, ["hello", "world", "lighthouse"]);
 
