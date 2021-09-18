@@ -20,18 +20,21 @@ const assertArraysEqual = function(arr1, arr2) {
   }
 };
 
-// function that removes unwanted words from the source array & returns an updated array
 const without = function(source, itemsToRemove) {
   let newArray = [];
-  for (let word of source) {
-    if (itemsToRemove[word] !== source[word]) {
-      newArray.push(source[word]);
+
+  // 
+  for (let element of source) { 
+    if (!itemsToRemove.includes(element)) {
+      newArray.push(element);
     }
   }
   return newArray;
 };
 
-console.log(without([1, 2, 3], [2]))
+assertArraysEqual(without([1, 2, 3], [2]), [1, 3]);
+assertArraysEqual(without([1, 2, 3], [1, 3]), [2]);
+assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]);
 
 // test cases (1)
 const words = ["hello", "world", "lighthouse"];
@@ -39,30 +42,5 @@ console.log(without(words, ["lighthouse"]))
 
 without(words, ["lighthouse"]); // no need to capture return value for this test case
 
-// Make sure the original array was not altered by the without function
-assertArraysEqual(words, ["hello", "world", "lighthouse"]);
-
-// add console break for viewability
-console.log("---- break ----")
-
-// same without function with new .include() method
-const without2 = function(source, itemsToRemove) {
-  let newArray = [];
-  for (let word of source) { 
-    if (!itemsToRemove.includes(word)) {
-      newArray.push(word);
-    }
-  }
-  return newArray;
-};
-
-console.log(without2([1, 2, 3], [2]))
-
-assertArraysEqual(without2([1, 2, 3], [1, 3]), [2, 3]);
-assertArraysEqual(without2([1, 2, 3], [1, 3]), [6, 0]);
-
-// test cases (1)
-console.log(without2(words, ["lighthouse"]))
-without2(words, ["lighthouse"]); // no need to capture return value for this test case
 // Make sure the original array was not altered by the without function
 assertArraysEqual(words, ["hello", "world", "lighthouse"]);
