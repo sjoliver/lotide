@@ -23,8 +23,8 @@ const assertArraysEqual = function(arr1, arr2) {
 const without = function(source, itemsToRemove) {
   let newArray = [];
 
-  // 
-  for (let element of source) { 
+  //
+  for (let element of source) {
     if (!itemsToRemove.includes(element)) {
       newArray.push(element);
     }
@@ -38,7 +38,7 @@ assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]);
 
 // test cases (1)
 const words = ["hello", "world", "lighthouse"];
-console.log(without(words, ["lighthouse"]))
+console.log(without(words, ["lighthouse"]));
 
 without(words, ["lighthouse"]); // no need to capture return value for this test case
 
