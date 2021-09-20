@@ -8,5 +8,4 @@ const smArray = [1, 2];
 
 assertArraysEqual(middle(oddArray), [2]); // pass
 assertArraysEqual(middle(evenArray), [2, 3]); // pass
-assertArraysEqual(middle(smArray), []); 
-
+assertArraysEqual(middle(smArray), []); // why you failing, fool???

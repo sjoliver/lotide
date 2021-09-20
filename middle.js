@@ -3,7 +3,7 @@ const middle = function(array) {
   let midArray = [];
   
   if (array.length <= 2) {
-    return [];
+    return midArray;
   }
 
   if (array.length % 2 !== 0) {
@@ -23,3 +23,4 @@ const middle = function(array) {
 };
 
 module.exports = middle;
+
