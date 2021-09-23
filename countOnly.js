@@ -1,11 +1,4 @@
-// assertEqual function checks if param1 === param2
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`💚💚💚 Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`💔💔💔 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+const assertEqual = require('./assertEqual')
 
 // allItems = array, itemsToCount = object
 // return an object containg counts of each item in the array (when object value is true)
@@ -43,3 +36,7 @@ assertEqual(result1["Jason"], 1);
 assertEqual(result1["Karima"], undefined);
 assertEqual(result1["Fang"], 2);
 assertEqual(result1["Agouhanna"], undefined);
+
+module.exports = {
+  countOnly
+}
