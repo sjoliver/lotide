@@ -16,20 +16,20 @@ const letterPositions = require('./letterPositions');
 const without = require('./without');
 
 module.exports = {
-  head: head,
-  tail: tail,
-  middle: middle,
-  assertArraysEqual: assertArraysEqual,
-  countLetters: countLetters,
-  eqObjects: eqObjects,
-  map: map,
-  takeUntil: takeUntil,
-  assertEqual: assertEqual,
-  countOnly: countOnly,
-  findKeyByValue: findKeyByValue,
-  assertObjectsEqual: assertObjectsEqual,
-  eqArrays: eqArrays,
-  findKey: findKey,
-  letterPositions: letterPositions,
-  without: without
+  head,
+  tail,
+  middle,
+  assertArraysEqual,
+  countLetters,
+  eqObjects,
+  map,
+  takeUntil,
+  assertEqual,
+  countOnly,
+  findKeyByValue,
+  assertObjectsEqual,
+  eqArrays,
+  findKey,
+  letterPositions,
+  without
 };
